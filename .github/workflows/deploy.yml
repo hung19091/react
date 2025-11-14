@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Show current dir
+        run: |
+          pwd
+          ls -R
       - name: Checkout repository
         uses: actions/checkout@v3
 
