@@ -1,14 +1,10 @@
-import { useState } from "react";
+import React from "react";
+import { createRoot } from "react-dom/client";
 
-function App() {
-  const [count, setCount] = useState(0);
+const App = () => {
+  return <h1>Hello World!</h1>;
+};
 
-  return (
-    <div>
-      <h1>Count: {count}</h1>
-      <button onClick={() => setCount(count + 1)}>+1</button>
-    </div>
-  );
-}
-
-export default App;
+const container = document.getElementById("root")!;
+const root = createRoot(container);
+root.render(<App />);
